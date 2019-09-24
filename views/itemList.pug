@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    link(rel='stylesheet',href='/stylesheets/index.css')
+  body
+    div.container
+      h1 Item List
+      br
+      br
+      table#itemtable
+        thead
+          tr
+            th Item ID
+            th Item Name
+            th Quantity
+            th Price
+        tbody
+          each item in list
+             tr
+               td= item._id
+               td= item.name
+               td= item.qty
+               td= item.price

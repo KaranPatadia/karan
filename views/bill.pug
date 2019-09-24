@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    link(rel='stylesheet',href='/stylesheets/index.css')
+  body
+    div.container
+      h1 Order Item
+      form(action="/shop/cust/menu/bill",method="get")
+        p #{id}
+        br
+        p #{name}
+        br
+        p #{qty}
+        br
+        p #{price}
+        br
+        p #{total}
+        br
+        input.btn(type="submit",name="ok",value="OK")

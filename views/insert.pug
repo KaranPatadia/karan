@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    link(rel='stylesheet',href='/stylesheets/index.css')
+  body
+    div.container
+      h1 Item Insert
+      form(action="/shop/admin/menu/insert",method="post")
+        br
+        input.id(type="text",name="id",placeholder="Item ID")
+        br
+        input.name(type="text",name="name",placeholder="Name")
+        br
+        input.qty(type="text",name="qty",placeholder="Quantity")
+        br
+        input.price(type="text",name="price",placeholder="Price")
+        br
+        br
+        input.btn(type="submit",value="submit")
