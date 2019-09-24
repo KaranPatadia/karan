@@ -17,10 +17,9 @@ var bill=function(id,name,price,quantity,total){
   this.quantity = quantity,
   this.total = total
 };
-var billList=[];
-
 //Redirecting to order page
 router.get('/shop/cust/menu/order', function(req, res, next) {
+    var billList=[];
     res.render('order');
 });
 

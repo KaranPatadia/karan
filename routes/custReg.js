@@ -16,6 +16,7 @@ var customer= mongoose.model('customers', userSchema);
 
 //Customer Registration code
 router.get('/shop/cust/regis', function(req, res, next) {
+
   res.render('custReg');
 });
 
@@ -54,7 +55,8 @@ router.post('/shop/cust/login',function(req,res,next){
     else if(check.status=="Disable")
       res.render('custLogin',{'error':'Your Status is disabled'});
     else{
-      res.render('custMenu',{'user':custinfo.username})
+      billList=[];
+      res.render('custMenu')
     }
   });
 });
