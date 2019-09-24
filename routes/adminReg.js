@@ -22,10 +22,7 @@ router.get('/shop/admin/regis', function(req, res, next) {
 //Storing the new admin details in database
 router.post('/shop/admin/regis',function(req,res,next){
   var admininfo = req.body
-<<<<<<< HEAD
 
-=======
->>>>>>> ab5cbdde230736b306324b495172e0c1b9957c68
     var newadmin= new admin({
       username: admininfo.username,
       password: admininfo.password

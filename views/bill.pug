@@ -6,14 +6,10 @@ html
     div.container
       h1 Order Item
       form(action="/shop/cust/menu/bill",method="get")
-        p #{id}
-        br
-        p #{name}
-        br
-        p #{qty}
-        br
-        p #{price}
-        br
-        p #{total}
+        h4 id |\t Name    | Price | Quantity | total
+        each item in billList
+          p #{item.id} | #{item.name}  |   #{item.price}   |     #{item.quantity}    | #{item.total}
+          br
+        p #{totals}
         br
         input.btn(type="submit",name="ok",value="OK")
